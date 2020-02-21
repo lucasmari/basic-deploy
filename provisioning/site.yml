@@ -45,3 +45,5 @@
         name: nginx-proxy
         image: nginx:1.13
         state: started
+        ports:
+          - 80:80
