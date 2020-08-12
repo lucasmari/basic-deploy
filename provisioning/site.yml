@@ -9,13 +9,13 @@
       apt: name={{ item }} state=latest update_cache=yes
       loop:
         [
-          "apt-transport-https",
-          "ca-certificates",
-          "curl",
-          "software-properties-common",
-          "python3-pip",
-          "virtualenv",
-          "python3-setuptools",
+          'apt-transport-https',
+          'ca-certificates',
+          'curl',
+          'software-properties-common',
+          'python3-pip',
+          'virtualenv',
+          'python3-setuptools',
         ]
 
     - name: Add Docker GPG apt Key
@@ -45,5 +45,21 @@
         name: nginx-proxy
         image: nginx:1.13
         state: started
+        restart_policy: always
+        ports:
+          - 80:80
+
+    - name: Copy static HTML directory to Nginx container
+      copy:
+        src: /usr/share/nginx/html/static-site-src
+        dest: /usr/share/nginx/html
+      become: yes
+
+    - name: Restart container
+      docker_container:
+        name: nginx-proxy
+        image: nginx:1.13
+        state: stopped
+        restart_policy: always
         ports:
           - 80:80
