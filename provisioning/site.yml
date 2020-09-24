@@ -42,24 +42,30 @@
 
     - name: Start container
       docker_container:
-        name: nginx-proxy
-        image: nginx:1.13
+        name: nginx
+        image: nginx:latest
         state: started
         restart_policy: always
         ports:
           - 80:80
 
-    - name: Copy static HTML directory to Nginx container
-      copy:
-        src: /usr/share/nginx/html/static-site-src
-        dest: /usr/share/nginx/html
-      become: yes
+    - name: Copy html file into existing container
+      shell: docker cp /tmp/static-site-src/index.html nginx:/usr/share/nginx/html
 
-    - name: Restart container
+    - name: Copy css file into existing container
+      shell: docker cp /tmp/static-site-src/style.css nginx:/usr/share/nginx/html
+
+    - name: Stop container
       docker_container:
-        name: nginx-proxy
-        image: nginx:1.13
+        name: nginx
+        image: nginx:latest
         state: stopped
+
+    - name: Start container
+      docker_container:
+        name: nginx
+        image: nginx:latest
+        state: started
         restart_policy: always
         ports:
           - 80:80
