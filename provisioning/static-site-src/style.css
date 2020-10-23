@@ -1,9 +1,8 @@
 body {
   font-family: arial, helvetica, sans-serif;
   font-size: 14px;
-  color: black;
-  background-color: #cfc;
-  margin: 20px;
+  color: white;
+  background-color: #101010;
   padding: 0;
 }
 
@@ -40,12 +39,6 @@ h3 {
   font-size: 1.25em;
 }
 
-img {
-  border-style: dashed;
-  border-width: 2px;
-  border-color: #ccc;
-}
-
 a {
   text-decoration: none;
 }
@@ -55,11 +48,91 @@ strong {
   text-transform: uppercase;
 }
 
-li {
-  color: #900;
-  font-style: italic;
-}
-
 table {
   background-color: #ccc;
+}
+
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-size: 1.2em;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #303030;
+}
+
+ul li img {
+  vertical-align: middle;
+}
+
+.active {
+  background-color: #808080;
+}
+
+.home {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.4em;
+  background-color: transparent;
+  padding-right: 30px;
+}
+
+#grad {
+  background: red;
+  background: -webkit-linear-gradient(
+    left,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -o-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: -moz-linear-gradient(
+    right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background: linear-gradient(
+    to right,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -49,11 +49,8 @@
         ports:
           - 80:80
 
-    - name: Copy html file into existing container
-      shell: docker cp /tmp/static-site-src/index.html nginx:/usr/share/nginx/html
-
-    - name: Copy css file into existing container
-      shell: docker cp /tmp/static-site-src/style.css nginx:/usr/share/nginx/html
+    - name: Copy static-site source into existing container
+      shell: docker cp /tmp/static-site-src/. nginx:/usr/share/nginx/html
 
     - name: Stop container
       docker_container:
