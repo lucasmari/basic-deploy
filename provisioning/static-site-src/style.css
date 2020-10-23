@@ -1,28 +1,25 @@
 body {
   font-family: arial, helvetica, sans-serif;
-  font-size: 14px;
   color: white;
+  padding-top: 50px;
   background-color: #101010;
-  padding: 0;
 }
 
 p {
   line-height: 21px;
 }
 
+hr {
+  margin-right: 70%;
+}
+
 h1 {
-  color: #ffc;
-  background-color: #555;
+  color: white;
   font-size: 2em;
-  margin: 0;
+  margin-left: 10px;
   margin-bottom: 7px;
   padding: 4px;
   font-style: italic;
-  text-align: center;
-  letter-spacing: 0.5em;
-  border-bottom-style: solid;
-  border-bottom-width: 0.5em;
-  border-bottom-color: #c0c;
 }
 
 h2 {
@@ -53,14 +50,18 @@ table {
 }
 
 ul {
-  position: fixed;
-  top: 0;
-  width: 100%;
   list-style-type: none;
-  overflow: hidden;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #202020;
+  border-bottom-style: solid;
+  border-bottom-width: 0.3em;
+  border-bottom-color: #ffc;
 }
 
 li {
@@ -68,31 +69,43 @@ li {
 }
 
 li a {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  padding: 16px 20px;
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #303030;
+  color: #ffc;
 }
 
-ul li img {
+.home-img {
+  padding: 12px;
   vertical-align: middle;
 }
 
+.home-img:hover {
+  background-color: transparent;
+}
+
 .active {
-  background-color: #808080;
+  background-color: #303030;
 }
 
 .home {
   font-family: 'Share Tech', sans-serif;
   font-size: 1.4em;
+  color: #ffc;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 40px;
+  padding-left: 0;
+}
+
+.home:hover {
   background-color: transparent;
-  padding-right: 30px;
 }
 
 #grad {
