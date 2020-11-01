@@ -81,6 +81,54 @@ li a:hover {
   color: #ffc;
 }
 
+.nav .search-container {
+  float: right;
+}
+
+.nav input[type='text'] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  color: white;
+  background: #101010;
+}
+
+.nav .search-container button {
+  vertical-align: middle;
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #303030;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav .search-container button:hover {
+  color: #696969;
+}
+
+@media screen and (max-width: 600px) {
+  .nav .search-container {
+    float: none;
+  }
+  .nav a,
+  .nav input[type='text'],
+  .nav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .nav input[type='text'] {
+    border: 1px solid #ffc;
+  }
+}
+
 .home-img {
   padding: 12px;
   vertical-align: middle;
@@ -106,46 +154,4 @@ li a:hover {
 
 .home:hover {
   background-color: transparent;
-}
-
-#grad {
-  background: red;
-  background: -webkit-linear-gradient(
-    left,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  background: -o-linear-gradient(
-    right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  background: -moz-linear-gradient(
-    right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  background: linear-gradient(
-    to right,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
