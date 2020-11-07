@@ -81,24 +81,52 @@ li a:hover {
   color: #ffc;
 }
 
-.nav .search-container {
-  float: right;
+.active {
+  background-color: #303030;
 }
 
-.nav input[type='text'] {
+.home-img {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.home-img:hover {
+  background-color: transparent;
+}
+
+.home {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.4em;
+  color: #ffc;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 40px;
+  padding-left: 0;
+}
+
+.home:hover {
+  background-color: transparent;
+}
+
+.search-container {
+  float: left;
+}
+
+.search-container input[type='text'] {
   padding: 6px;
-  margin-top: 8px;
+  margin-top: 10px;
+  margin-left: 20px;
   font-size: 17px;
   border: none;
   color: white;
   background: #101010;
 }
 
-.nav .search-container button {
+.search-container button {
   vertical-align: middle;
   float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
+  padding: 6px;
+  margin-top: 10px;
   margin-right: 16px;
   background: #303030;
   font-size: 17px;
@@ -106,7 +134,7 @@ li a:hover {
   cursor: pointer;
 }
 
-.nav .search-container button:hover {
+.search-container button:hover {
   color: #696969;
 }
 
@@ -129,29 +157,68 @@ li a:hover {
   }
 }
 
-.home-img {
-  padding: 12px;
-  vertical-align: middle;
+.signin-container {
+  background-color: #202020;
+  width: 300px;
+  height: 180px;
+  margin: 30px auto auto auto;
+  display: flex;
+  align-items: center;
 }
 
-.home-img:hover {
-  background-color: transparent;
+.signin-container input[type='text'] {
+  width: 270px;
+  padding: 6px;
+  margin: 10px;
+  font-size: 17px;
+  border: none;
+  color: white;
+  background: #101010;
 }
 
-.active {
-  background-color: #303030;
+.signin-container button {
+  width: 280px;
+  padding: 6px;
+  margin: 10px;
+  background: #303030;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 
-.home {
-  font-family: 'Share Tech', sans-serif;
-  font-size: 1.4em;
-  color: #ffc;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-right: 40px;
-  padding-left: 0;
+.signin-container button:hover {
+  color: #696969;
 }
 
-.home:hover {
-  background-color: transparent;
+.signup-container {
+  background-color: #202020;
+  width: 300px;
+  height: 220px;
+  margin: 30px auto auto auto;
+  display: flex;
+  align-items: center;
+}
+
+.signup-container input[type='text'] {
+  width: 270px;
+  padding: 6px;
+  margin: 10px;
+  font-size: 17px;
+  border: none;
+  color: white;
+  background: #101010;
+}
+
+.signup-container button {
+  width: 280px;
+  padding: 6px;
+  margin: 10px;
+  background: #303030;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-container button:hover {
+  color: #696969;
 }
