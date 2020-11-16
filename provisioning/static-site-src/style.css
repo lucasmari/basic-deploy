@@ -222,3 +222,20 @@ li a:hover {
 .signup-container button:hover {
   color: #696969;
 }
+
+.content-container {
+  padding: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  float: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+}
+
+.content {
+  width: full;
+  height: 300px;
+  margin: 40px;
+  background-color: #303030;
+}
