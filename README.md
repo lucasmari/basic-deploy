@@ -7,12 +7,13 @@ Simple web page deployment project
 - Vagrant
 - VirtualBox
 - Ansible
-- Nginx
 - Docker
+- Nginx
 
 ### Frontend
 
-- HTML, CSS
+- HTML
+- CSS
 
 ## Getting Started
 
@@ -26,4 +27,4 @@ Run `vagrant up` on your terminal and access _localhost:1234_ on your browser.
 
 ## How It Works
 
-Running "vagrant up", will bring an Ubuntu machine up and trigger the provisioning (Ansible) in the guest machine (Vagrant). This provisioning is configured in _./provisioning/site.yml_ and is responsible for installing required packages and Docker before starting the Nginx container.
+Running "vagrant up", will bring an Ubuntu machine up and trigger the provisioning (Ansible) in the guest machine (Vagrant). This provisioning is configured in _./provisioning/site.yml_, divided by roles, and it's responsible for installing required packages and Docker before starting the Nginx container.
