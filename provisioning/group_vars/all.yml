@@ -1,1 +1,5 @@
 ansible_python_interpreter: /usr/bin/python3
+docker_gpg_url: https://download.docker.com/linux/ubuntu/gpg
+docker_repo_url: https://download.docker.com/linux/ubuntu
+host_static_site_src: /tmp/static-site-src/.
+container_static_site_dest: /usr/share/nginx/html

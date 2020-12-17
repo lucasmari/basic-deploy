@@ -1,0 +1,48 @@
+- name: Add Docker GPG apt Key
+  apt_key:
+    url: '{{ docker_gpg_url }}'
+    state: present
+
+- name: Add Docker Repository
+  apt_repository:
+    repo: deb {{ docker_repo_url }} bionic stable
+    state: present
+
+- name: Update apt and install docker-ce
+  apt: update_cache=yes name=docker-ce state=latest
+
+- name: Install Docker Module for Python
+  pip:
+    name: docker
+
+- name: Pull default Docker image
+  docker_image:
+    name: ubuntu
+    source: pull
+
+- name: Start container
+  docker_container:
+    name: nginx
+    image: nginx:latest
+    state: started
+    restart_policy: always
+    ports:
+      - 80:80
+
+- name: Copy static-site source into existing container
+  shell: docker cp {{ host_static_site_src }} nginx:{{ container_static_site_dest }}
+
+- name: Stop container
+  docker_container:
+    name: nginx
+    image: nginx:latest
+    state: stopped
+
+- name: Start container
+  docker_container:
+    name: nginx
+    image: nginx:latest
+    state: started
+    restart_policy: always
+    ports:
+      - 80:80
