@@ -59,8 +59,8 @@ ul {
   width: 100%;
   background-color: #202020;
   border-bottom-style: solid;
-  border-bottom-width: 0.3em;
-  border-bottom-color: #ffc;
+  border-bottom-width: 0.1em;
+  border-bottom-color: #000000;
 }
 
 li {
@@ -85,7 +85,10 @@ video {
 }
 
 .active {
-  background-color: #303030;
+  color: #ffc;
+  border-bottom-style: solid;
+  border-bottom-width: 0.2em;
+  border-bottom-color: #ffc;
 }
 
 .home-img {
